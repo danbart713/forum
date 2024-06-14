@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "1edd84d2-5b93-445d-89ff-077b46adde19",
+		"name": "Forum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/authentication/register - Individual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"individual-email@test.com\",\n    \"password\": \"RandomGoodPassword1!Individual\",\n    \"displayName\": \"ExampleIndividualDisplayName\",\n    \"userRole\": \"Individual\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authentication/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/authentication/login - Individual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"individual-email@test.com\",\n    \"password\": \"RandomGoodPassword1!Individual\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authentication/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/authentication/register - Business",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"business-email@test.com\",\n    \"password\": \"RandomGoodPassword1!Business\",\n    \"displayName\": \"ExampleBusinessDisplayName\",\n    \"userRole\": \"Business\",\n    \"businessName\": \"ExampleBusinessName\",\n    \"contactFirstName\": \"ExampleContactFirstName\",\n    \"contactLastName\": \"ExampleContactLastName\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authentication/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/authentication/login - Business",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"business-email@test.com\",\n    \"password\": \"RandomGoodPassword1!Business\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authentication/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/authentication/register - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin-email@test.com\",\n    \"password\": \"RandomGoodPassword1!Admin\",\n    \"displayName\": \"ExampleAdminDisplayName\",\n    \"userRole\": \"Admin\",\n    \"firstName\": \"ExampleFirstName\",\n    \"lastName\": \"ExampleLastName\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authentication/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/authentication/login - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin-email@test.com\",\n    \"password\": \"RandomGoodPassword1!Admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authentication/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test/testIndividual",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJGb3J1bSBTaXRlIiwic3ViIjoiaW5kaXZpZHVhbC1lbWFpbEB0ZXN0LmNvbSIsImlhdCI6MTcxODM5MDE1MiwiZXhwIjoxNzE4NDc2NTUyLCJqdGkiOiJmNDQ1MDQ5OS1lZDJlLTQ4NTEtOGZiOC0yYTFiZDYzZTI5ZDEiLCJ1c2VyVXVpZElkIjoiYzEwZTFiOWItZmRkMy00NWQzLThlNzAtNzM4YTRjZDE5OWE4IiwidXNlclJvbGUiOiJJTkRJVklEVUFMIiwiaW5kaXZpZHVhbFV1aWRJZCI6ImRiZjk1MWQ5LTljNjctNDdiYy05MjY3LTdkMWZiYWIxZDExZiJ9.fcF814A4xd73cySP5W9yNlnt537vPLb_jev2C1qSs8cyylKTVbHkdbN3pfOwHrULv5aA4xoMwQkCPJkz2U7G3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test/testIndividual",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"testIndividual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test/testBusiness",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJGb3J1bSBTaXRlIiwic3ViIjoiYnVzaW5lc3MtZW1haWxAdGVzdC5jb20iLCJpYXQiOjE3MTgzOTAxNjgsImV4cCI6MTcxODQ3NjU2OCwianRpIjoiMDEwZTUwN2ItMDY1OS00MzhkLTk1ZjAtYmMwNTYyMzlmNzU4IiwiYnVzaW5lc3NVdWlkSWQiOiI5NmViYTI1ZS1hYTU0LTRlMmUtOGQ4YS0xNDBjZjlmODMxZmMiLCJ1c2VyVXVpZElkIjoiM2ZmZjRmNmItY2QzMy00MDMwLWI2YzgtODI0ODdkYzhlZjdiIiwidXNlclJvbGUiOiJCVVNJTkVTUyJ9.is2PUCpWSF-KltdiyjNuNCVME5ea7vftw_H4rGLvy0bTHsryb5mVtUH2IRy7svqkEG3i5J5rk7XzP-19J2JxVQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/testBusiness",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"testBusiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test/testAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJGb3J1bSBTaXRlIiwic3ViIjoiYWRtaW4tZW1haWxAdGVzdC5jb20iLCJpYXQiOjE3MTgzOTAxOTEsImV4cCI6MTcxODQ3NjU5MSwianRpIjoiMzk3YmFiNzMtNTI1ZS00ZjNkLTllZWUtMzMzZjk0NmE1ZTNhIiwiYWRtaW5VdWlkSWQiOiI5NmM4NmY2Ny0xNzgzLTQwZDUtYWQzYS1iZTNlZTNkNjk1ZDYiLCJ1c2VyVXVpZElkIjoiNzNkYzNjZjItMGMzMi00OTljLWJjMWQtMmI2NzFiZWRkMjVlIiwidXNlclJvbGUiOiJBRE1JTiJ9.cOgdQZ8XTtD_tHVfBQsUkwEYZpNVP76__CVHPoU2g0oqwdDpZmu9mHhveEitOys_te9T6S4oh93JfHpBXCRjmg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/testAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"testAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/authentication/logout - Individual",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJGb3J1bSBTaXRlIiwic3ViIjoiYWRtaW4tZW1haWxAdGVzdC5jb20iLCJpYXQiOjE3MTgzOTAxOTEsImV4cCI6MTcxODQ3NjU5MSwianRpIjoiMzk3YmFiNzMtNTI1ZS00ZjNkLTllZWUtMzMzZjk0NmE1ZTNhIiwiYWRtaW5VdWlkSWQiOiI5NmM4NmY2Ny0xNzgzLTQwZDUtYWQzYS1iZTNlZTNkNjk1ZDYiLCJ1c2VyVXVpZElkIjoiNzNkYzNjZjItMGMzMi00OTljLWJjMWQtMmI2NzFiZWRkMjVlIiwidXNlclJvbGUiOiJBRE1JTiJ9.cOgdQZ8XTtD_tHVfBQsUkwEYZpNVP76__CVHPoU2g0oqwdDpZmu9mHhveEitOys_te9T6S4oh93JfHpBXCRjmg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/authentication/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "email": "business-email@test.com",
+  "password": "RandomGoodPassword1!Business",
+  "displayName": "ExampleBusinessDisplayName",
+  "userRole": "Business",
+  "businessName": "ExampleBusinessName",
+  "contactFirstName": "ExampleContactFirstName",
+  "contactLastName": "ExampleContactLastName"
+}
